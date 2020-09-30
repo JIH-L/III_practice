@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Eden</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet">
+    <style>
+        .nav-row {
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 100px;
+        }
+
+        .img {
+            width: 100%;
+        }
+
+        .font {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .imgs {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .center {
+            text-align: justify;
+        }
+
+        .item {
+            width: 4rem;
+        }
+
+        .ques {
+            position: absolute;
+            right: 30px;
+            bottom: 80px;
+            position: fixed;
+        }
+
+        .link {
+            color: rgb(116, 116, 116);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Anthor Eden</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="row pr-4">
+                    <div class="item"><i class="fab fa-instagram fa-2x"></i></div>
+                    <div class="item"><i class="fab fa-facebook-square fa-2x"></i></div>
+                </div>
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search"> -->
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Sing in</button>
+            </form>
+        </div>
+    </nav>
+
+    <Main class="border-bottom">
+
+        <div style="margin-top: 40px;">
+            <img src="/img/main.png" class="img img-fluid" alt="">
+        </div>
+        <div class="border-bottom pb-5"></div>
+
+        <div class="justify-content-start">
+            <div class="row m-5">
+                <div class="col-md-8 col-12">
+                    <img src="img/bg.jpg" class="imgs">
+                </div>
+                <div class="col-md-4 col-12 align-self-center pt-3">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit blanditiis consequatur
+                        magni
+                        corporis,
+                        cumque iste tempore tenetur non magnam, libero nobis dicta est sint labore commodi in
+                        voluptatum
+                        dolorum eveniet.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="border-bottom"></div>
+
+        <div class="justify-content-end">
+            <div class="row m-5 ">
+                <div class="col-md-8 col-12 order-2">
+                    <img src="img/main2.png" class="imgs">
+                </div>
+                <div class="col-md-4 col-12 align-self-center text-right pt-3 order-1">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit blanditiis consequatur
+                        magni
+                        corporis,
+                        cumque iste tempore tenetur non magnam, libero nobis dicta est sint labore commodi in
+                        voluptatum
+                        dolorum eveniet.</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- <div class="mr-5">
+            <div class="d-flex justify-content-end  pb-5">
+                <div class="order-2 p-2">
+                    <img src="img/main2.png" class="img-fluid shadow-lg bg-white rounded mt-5" alt="Responsive image">
+                </div>
+                <div class="order-1 p-2 w-25 align-self-center text-right">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit blanditiis consequatur
+                        magni
+                        corporis,
+                        cumque iste tempore tenetur non magnam, libero nobis dicta est sint labore commodi in
+                        voluptatum
+                        dolorum eveniet.</p>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row justify-content-center border-top border-bottom mt-2 py-2 mb-5">
+            <h3>Introduction</h3>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div id="carouselExampleIndicators" class="carousel slide w-75" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/a1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/a2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/a3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/a4.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/a5.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/a6.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center border-top border-bottom mt-2 py-2">
+            <h3>Character</h3>
+        </div>
+        <div class="contanier font">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12 col-md-5 col-lg-3 mx-2 shadow mb-5 bg-white rounded">
+                    <img src="img/ch1.jpg" class="img-fluid" alt="Responsive image">
+                    <h3 class="mt-3 px-2">阿爾德</h3>
+                    <p class="px-2">來自巴路奧其的年輕人，於16年前在月影之森和一名還是嬰兒的女孩一起被村民發現。雖然有些笨拙但個性溫柔，同時有著強烈的正義感與責任感。</p>
+                </div>
+                <div class="col-12 col-md-5 col-lg-3 mx-2 shadow mb-5 bg-white rounded">
+                    <img src="img/ch2.jpg" class="img-fluid" alt="Responsive image">
+                    <h3 class="mt-3 px-2">菲妮</h3>
+                    <p class="px-2">來自巴路奧其的少女，於16年前在月影之森被村民發現。同時是個愛著大自然與生物的溫柔少女。</p>
+                </div>
+                <div class="col-12 col-md-5 col-lg-3 mx-2 shadow mb-5 bg-white rounded">
+                    <img src="img/ch3.jpg" class="img-fluid" alt="Responsive image">
+                    <h3 class="mt-3 px-2">紗希</h3>
+                    <p class="px-2">
+                        過去因為父親的實驗被強制賦予了能將感情具體化能力的少女，雖然透過黑暗蘋果事件後封印了能力，但因感情失控而差點傷害到了朋友的記憶，卻無法輕易忘卻。他仍然不知該如何面對黑暗蘋果事件後自身體內萌生出的新力量。
+                    </p>
+                </div>
+                <div class="col-12 col-md-5 col-lg-3 mx-2 shadow mb-5 bg-white rounded px-2 mx-2">
+                    <img src="img/ch4.jpg" class="img-fluid" alt="Responsive image">
+                    <h3 class="mt-3 px-2">艾米</h3>
+                    <p class="px-2">
+                        艾路茲恩伽馬地區武器店伊莎堂的招牌女店員。為了對付合成人類，每天不停地鍛鍊身體。與大喇喇地父親2人同居，負責家中所有家事，不過，由於十分粗枝大葉，下廚3次總會有1次將菜餚煮成焦炭。</p>
+                </div>
+                <div class="col-12 col-md-5 col-lg-3 shadow mb-5 bg-white rounded px-2 mx-2">
+                    <img src="img/ch5.png" class="img-fluid" alt="Responsive image">
+                    <h3 class="mt-1 px-2">蘇賽特</h3>
+                    <p class="px-2">居住於艾路茲恩，正值青春的哥德蘿莉少女。公然對其他人宣稱自己是墮落於魔界的精靈轉世。講話毒辣態度高傲，但意外地很會照顧別人，對甜食毫無抵抗力，經常出沒於知名甜品店。
+                    </p>
+                </div>
+                <div class="col-12 col-md-5 col-lg-3 shadow mb-5 bg-white rounded px-2 mx-2">
+                    <img src="img/ch6.jpg" class="img-fluid" alt="Responsive image">
+                    <h3 class="mt-3 px-2">伊絲卡</h3>
+                    <p class="px-2">
+                        IDA學園自治部隊IDEA的會長。擁有優雅端莊的面容，從容自若的冷靜態度以及敏銳聰慧的頭腦。在精挑細選的精英部隊IDEA當中也深受同伴們信賴。似乎正在追查一個令他不惜賭上人生的謎團...。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center border-bottom border-top mb-5 py-2">
+            <h3>Information</h3>
+        </div>
+        <div class="info container mb-5 font" style="width: 500px;">
+            <h5 class="text-info font-weight-bold">遊戲名稱：</h5>
+            <p>Another Eden：穿越時空的貓</p>
+            <h5 class="text-info font-weight-bold">遊戲類型：</h5>
+            <P>角色扮演</P>
+            <h5 class="text-info font-weight-bold">發佈地區：</h5>
+            <P>美國、加拿大、澳洲、新加坡、韓國、台灣、香港、澳門、 保加利亞、捷克、
+                丹麥、德國、愛沙尼亞、愛爾蘭、希臘、西班牙、法國、克羅埃西亞、義大利、
+                塞浦勒斯、拉脫維亞、立陶宛、盧森堡、匈牙利、馬爾他、荷蘭、奧地利、波蘭、葡萄牙、羅馬尼亞、斯洛伐尼亞、斯洛伐克、芬蘭、瑞典、英國、印尼、泰國、
+                菲律賓、越南、馬來西亞、緬甸、紐西蘭、印度、巴基斯坦伊斯蘭共和國、巴西聯邦共和國、奈及利亞聯邦共和國、俄羅斯聯邦、墨西哥合眾國、
+                埃及阿拉伯共和國、土耳其共和國、南非共和國、肯亞共和國、
+                哥倫比亞共和國、阿根廷共和國、烏克蘭、烏干達共和國、
+                阿爾及利亞人民民主共和國、烏茲別克、斯里蘭卡民主社會主義共和國、
+                哈薩克共和國、約旦哈希米王國、阿拉伯聯合大公國、瑞士聯邦、以色列、
+                黎巴嫩共和國、挪威王國、阿曼王國、科威特、巴林王國、冰島共和國、
+                列支敦斯登侯國</P>
+            <h5 class="text-info font-weight-bold">支援語言：</h5>
+            <p>英文、日文、韓文、繁體中文、德文、法文</p>
+            <h5 class="text-info font-weight-bold">遊戲價格：</h5>
+            <p>免費（內含付費項目）</p>
+            <h5 class="text-info font-weight-bold">支援平台：</h5>
+            <p>iOS / Android</p>
+            <h5 class="text-info font-weight-bold">支援OS：</h5>
+            <p>iOS 10.0或以上。Android 4.4 以上/記憶體(RAM) 2GB以上。</p>
+            <h5 class="text-info font-weight-bold">開發人員：</h5>
+            <p>劇本、演出：加藤 正人<br>
+                編曲：光田 康典、土屋、俊輔、Mariam Abounnasr<br>
+                美術總監：江草 天仁</p>
+        </div>
+        <div>
+            <div class="ques"><i class="fas fa-question-circle fa-2x"></i></div>
+        </div>
+    </Main>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-between mt-5 pb-5">
+
+                <div>
+                    <a href="#" class="link">新聞稿材料</a><span class="px-2">|</span><a href="#"
+                        class="link">個人資訊保護政策</a><span class="px-2">
+                        | </span> <a href="#" class="link">聯絡我們</a>
+                </div>
+                <div class="copyright">Copyright © 2020</div>
+            </div>
+        </div>
+        <div class="border-bottom mb-3"></div>
+        <div class="d-flex justify-content-center">
+            <img src="img/12.png" alt="" style="width: 64px;">
+        </div>
+        <div class="container mt-3" style=" width: 900px; font-size: 2px;">
+            <div class="text-center font">
+                <p>依遊戲軟體分級管理辦法分類為輔12級，您需滿12歲以上始得使用本遊戲。<br>
+                    本遊戲情節純屬虛構，遊戲內容涉及暴力（攻擊搏鬥等畫面）、菸酒、部分遊戲角色穿著凸顯性特徵之服飾。<br>
+                    長時間進行遊戲，容易影響正常作息。敬請注意使用時間，勿沉迷或不當模仿，宜適度休息及運動。<br>
+                    本遊戲設有內購道具，請依個人能力進行體驗，避免過度消費。<br>
+                    ※Apple、Apple 標誌、iPhone 和 iPad 是 Apple Inc. 在美國和其他國家或地區註冊的商標。App Store 是 Apple Inc. 的服務商標。<br>
+                    ※Google Play 和 Google Play 標誌均為 Google LLC 的商標。<br>
+                    © WFS</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
