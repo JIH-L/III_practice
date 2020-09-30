@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            color: aliceblue;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(231, 200, 131);
+            position: relative;
+            top: 2px;
+            left: 1px;
+        }
+
+        .bg {
+            height: 100px;
+            background-color: lightslategray;
+        }
+
+        .imgs {
+            width: 660px;
+            margin: 5rem auto 0 auto;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 2rem;
+            font-family: 微軟正黑體;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-around bg">
+        <a href="HW1.html">HomeWork-1</a>
+        <a href="HW2.html">HomeWork-2</a>
+        <a href="HW3.html">HomeWork-3</a>
+    </div>
+    <div class=" imgs">
+        <img id="img1" class="i" src="images/star.gif" />
+        <img id="img2" class="i" src="images/star.gif" />
+        <img id="img3" class="i" src="images/star.gif" />
+        <img id="img4" class="i" src="images/star.gif" />
+        <img id="img5" class="i" src="images/star.gif" />
+        <p id="p">請評分</p>
+    </div>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+        let imgs = $("img");
+        $("img").mouseover(function () {
+            let no = $(this)[0].id.charAt(3);
+            console.log(this)
+            for (let i = 0; i < no; i++) {
+                imgs[i].src = "images/chngstar.gif";
+                $("p").text(`給 ${i + 1} 分`);
+            }
+        })
+        $("img").mouseout(function () {
+            imgs.attr("src", "images/star.gif");
+            $("p").text("請評分");
+        })
+        $("img").click(function () {
+            $(this).attr("src", "images/chngstar.gif");
+            $(this).off("mouseout");
+            console.log(this);
+        })
+    </script>
+</body>
+
+</html>
