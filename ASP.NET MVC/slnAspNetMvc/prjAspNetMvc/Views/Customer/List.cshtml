@@ -1,0 +1,61 @@
+﻿@model IEnumerable<tCustomer>
+    @*IEnumerable是最上層的集合再下去是List*@
+@{
+    ViewBag.Title = "List";
+}
+@functions{
+    public string setMarks(string password)
+    {
+        if (password.Length < 3)
+            return "****";
+        string p1 = password.Substring(0, 1);
+        string pLast = password.Substring(password.Length - 1, 1);
+        string s = "";
+        for (int i = 1; i <= password.Length - 2; i++)
+            s += "*";
+        return p1 + s + pLast;
+    }
+}
+
+<h2>客戶資料列表</h2>
+<p>
+    <a href="~/Customer/New" class="btn btn-primary">新增客戶資料</a>
+</p>
+
+
+<p>
+    <table class="table">
+        <tr>
+            <td>序</td>
+            <td>編號</td>
+            <td>姓名</td>
+            <td>電話</td>
+            <td>地址</td>
+            <td>密碼</td>
+            <td>修改</td>
+            <td>刪除</td>
+        </tr>
+        @{
+            int count = 0;
+            foreach (tCustomer t in Model)
+            {
+                count++;
+            <tr>
+              <td>@count.ToString()</td>
+              <td>@t.fId.ToString()</td>
+               <td>@t.fName</td>
+               <td>@t.fPhone</td>
+               <td>@t.fAddress</td>
+               <td>@setMarks(t.fPassword)</td>
+               <td>@Html.ActionLink("編輯","Edit","Customer",new {id=t.fId},new { @*class不加@放這C要大寫*@Class="btn btn-success"})</td>
+               @*<td><a href="~/Customer/Delete/?id=@t.fId.ToString()">刪除</a></td>*@
+               <td>@Html.ActionLink("刪除", "Delete", "Customer", new { id = t.fId }, new { OnClick = "return confirm('確定要刪除嗎？')",Class="btn btn-danger" }) </td>
+               @*ActionLink(文字,Action,Controller,參數,JS)*@
+           </tr>
+            }
+        }
+
+    </table>
+
+</p>
+

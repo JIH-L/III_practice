@@ -1,0 +1,35 @@
+﻿@model prjAspNetMvc.tCustomer
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>修改客戶資料</h2>
+
+<form method="post">
+
+        <input type="hidden" name="fId" value="@Model.fId" />
+    <p>
+        姓名：<br />
+        <input type="text" name="fName" value="@Model.fName"/>
+    </p>
+    <p>
+        電話：<br />
+        <input type="text" name="fPhone" value="@Model.fPhone" />
+    </p>
+    <p>
+        生日：<br />
+        <input type="text" name="fBirthday" value="@Model.fBirthday" />
+    </p>
+    <p>
+        密碼：<br />
+        <input type="text" name="fPassword" value="@Model.fPassword" />
+    </p>
+    <p>
+        地址：<br />
+        <input type="text" name="fAddress" value="@Model.fAddress" />
+    </p>
+    <p>
+        <input type="submit" value="OK" />
+    </p>
+</form>

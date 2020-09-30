@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "bindingCustomerById";
+}
+
+
+<h2>客戶查詢資料結果 ( 繫結版 )</h2>
+<hr />
+<p>
+    @{
+        string photoName = "anonymous.jpg";
+        if (Model != null)
+        {
+            photoName = Model.fId.ToString() + ".jpg";
+        }
+    }
+    <img src="~/Content/@photoName" width="560" height="400" />
+</p>
+    @{
+        if (Model == null)
+        {
+            @:沒有客戶資料
+        }
+        else
+        {
+            @:客戶姓名：@Model.fName
+            <p>
+                客戶電話：@Model.fPhone
+            </p>
+        }
+    }
+
+
+
+
+

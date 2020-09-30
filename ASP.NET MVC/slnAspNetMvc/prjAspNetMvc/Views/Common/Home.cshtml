@@ -1,0 +1,9 @@
+﻿@using prjAspNetMvc.Models;
+@{
+    ViewBag.Title = "Home";
+    tCustomer cust = Session[CDictionary.SK_LOGEDIN_CUSTOMER] as tCustomer;
+}
+
+<h2>系統首頁</h2>
+<p>歡迎 @cust.fName , 登入成功</p>
+

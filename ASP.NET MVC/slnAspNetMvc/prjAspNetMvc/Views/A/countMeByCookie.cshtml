@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "countMeByCookie";
+}
+
+<h2>計數器ByCookie</h2>
+
+
+<form method="post">
+    <p>
+        <span>@ViewBag.countMe</span>
+        <input type="hidden" name="KK" value="@ViewBag.countMe" />
+        <div class="form-group">
+            <div>
+                <input type="submit" value="+1" class="btn btn-default" />
+            </div>
+        </div>
+    </p>
+</form>

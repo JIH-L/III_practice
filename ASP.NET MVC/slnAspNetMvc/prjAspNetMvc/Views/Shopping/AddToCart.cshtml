@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "AddToCart";
+}
+
+<h2>AddToCart</h2>
+<p>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <input name="txtFid" type="hidden" value="@Model" />
+
+        <div class="form-horizontal">
+            <span>請輸入數量</span>
+    <p>
+        @Html.TextBox("txtCount")
+    </p>
+    </div>
+    <input type="submit" value="購買" class="btn btn-default" />
+}
+    </p>

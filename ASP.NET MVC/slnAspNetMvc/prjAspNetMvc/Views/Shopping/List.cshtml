@@ -1,0 +1,69 @@
+﻿@model IEnumerable<prjAspNetMvc.tProduct>
+
+@{
+    ViewBag.Title = "List";
+}
+@functions{
+    public string getImgPath(string path)
+    {
+        if (string.IsNullOrEmpty(path))
+            return "";
+        string[] item = path.Split("\\".ToCharArray());
+        if(item.Length>1)
+            return "../Content/" + item[item.Length - 1];
+        return path;
+    }
+}
+
+<h2>商品列表</h2>
+
+<p>
+    @Html.ActionLink("檢視購物車", "CartView")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.fId)
+        </th>*@
+        <th>
+            特價商品
+        </th>
+        <th>
+            現有量
+        </th>
+        <th>
+            特惠價
+        </th>
+        <th>
+            商品照
+        </th>
+        <th>加入購物車(DB)</th>
+        <th>加入購物車(Session)</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fPrice)
+        </td>
+        <td>
+
+            <img src="@getImgPath(item.fImagPath)" width="70" height="50" />
+
+        </td>
+        <td>
+            @Html.ActionLink("購買", "AddToCart", new { id = item.fId })
+        </td>
+        <td>
+            @Html.ActionLink("購買", "AddToSession", new { id = item.fId })
+        </td>
+    </tr>
+}
+
+</table>
