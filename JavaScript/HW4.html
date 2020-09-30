@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork-4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            color: aliceblue;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(231, 200, 131);
+            position: relative;
+            top: 2px;
+            left: 1px;
+        }
+
+        .bg {
+            height: 100px;
+            background-color: lightslategray;
+        }
+
+        img {
+            width: 800px;
+            height: 600px;
+        }
+
+        .d1 {
+            text-align: center;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-around bg">
+        <a href="HW1.html">HomeWork-1</a>
+        <a href="HW2.html">HomeWork-2</a>
+        <a href="HW3.html">HomeWork-3</a>
+        <a href="HW4.html">HomeWork-4</a>
+        <a href="HW5.html">HomeWork-5</a>
+    </div>
+
+    <div class="d1">
+        <img class="img-fluid" id="A1" src="img/A1.jpg" alt="">
+    </div>
+
+    <script>
+        var k = 0;
+        var img = new Array();
+        img[0] = "img/A1.jpg";
+        img[1] = "img/A2.jpg";
+        img[2] = "img/A3.jpg";
+        img[3] = "img/A4.jpg";
+
+        function scrollPic() {
+            if (k > img.length - 1) {
+                k = 0;
+            }
+            for (var i = 0; i < img.length; i++) {
+                if (i == k) {
+                    document.getElementById("A1").src = img[i];
+                }
+            }
+            k++;
+        }
+
+        setInterval("scrollPic()", 3000);
+    </script>
+</body>
+
+</html>

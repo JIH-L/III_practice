@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork-1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        table {
+            margin: 5rem auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            background-color: rgb(238, 241, 202);
+            border: 3px solid rgb(93, 154, 179);
+            width: 90px;
+            height: 40px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        fieldset {
+            width: 500px;
+            margin-bottom: 3rem;
+            border-radius: 15px;
+            border: 1px solid rgb(223, 188, 124);
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            color: aliceblue;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(231, 200, 131);
+            position: relative;
+            top: 2px;
+            left: 1px;
+        }
+
+        .bg {
+            height: 100px;
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="row justify-content-around bg">
+        <a href="HW1.html">HomeWork-1</a>
+        <a href="HW2.html">HomeWork-2</a>
+        <a href="HW3.html">HomeWork-3</a>
+        <a href="HW4.html">HomeWork-4</a>
+        <a href="HW5.html">HomeWork-5</a>
+    </div>
+
+    <script>
+        let d = document.getElementById("d");
+        document.write("<table>");
+        for (var i = 1; i <= 9; i++) {
+            document.write("<tr>");
+            for (var j = 1; j <= 9; j++) {
+                document.write(`<td>${i} x ${j} = ${i * j}</td>`);
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+    </script>
+</body>
+
+</html>

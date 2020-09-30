@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework-2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            color: aliceblue;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(231, 200, 131);
+            position: relative;
+            top: 2px;
+            left: 1px;
+        }
+
+        .bg {
+            height: 100px;
+            background-color: lightslategray;
+        }
+
+        fieldset {
+            width: 500px;
+            border: 1px solid #4f82ac;
+            border-radius: 15px;
+            margin: 5rem auto 0px auto;
+        }
+
+        legend {
+            margin-left: 30px;
+            font-size: 20px;
+            font-family: 微軟正黑體;
+            font-weight: bolder;
+            width: auto;
+            padding: 0px 10px 0px 10px;
+        }
+
+        .st1 {
+            width: 450px;
+            padding: 30px;
+            border-bottom: 1px solid coral;
+            margin: 20px;
+        }
+
+        .st2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-size: 8px;
+            color: rgb(180, 180, 180);
+        }
+
+        label {
+            font-family: 微軟正黑體;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-around bg">
+        <a href="HW1.html">HomeWork-1</a>
+        <a href="HW2.html">HomeWork-2</a>
+        <a href="HW3.html">HomeWork-3</a>
+        <a href="HW4.html">HomeWork-4</a>
+        <a href="HW5.html">HomeWork-5</a>
+    </div>
+
+    <form action="#" method="GET" enctype="multipart/form-data">
+        <fieldset>
+            <legend>FormCheck</legend>
+            <div class="st1">
+                <label for="">姓名：</label>
+                <input type="text" id="idName" name="name" onblur="EnterName()" placeholder="請輸入姓名">
+                <span id="idsp1"></span>
+                </br><span>(1.不可空白，2.至少兩個字以上，3.必須全部為中文字)</span>
+            </div>
+            <div class="st1">
+                <label for="">密碼：</label>
+                <input type="password" id="idPwd" name="pwd" onblur="EnterPwd()" placeholder="請輸入密碼">
+                <span id="idsp2"></span>
+                </br><span>(1.不可空白，2.至少6個字以上，3.包含大小寫字母、數字、特殊符號)</span>
+
+            </div>
+            <div class="st1">
+                <label>日期：</label>
+                <input type="text" placeholder="ex:2020/06/20">
+                </br><span>格式：西元年/月/日 yyyy/mm/dd</span>
+            </div>
+            <div class="st2">
+                <input type="submit" value="送出">
+                <input type="reset" value="清除">
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        function EnterName() {
+            let Name = document.getElementById("idName").value;
+            console.log(Name);
+            let span = document.getElementById("idsp1");
+            let NameLen = Name.length;
+            let NameCh = Name.charCodeAt(0);
+
+
+            if (Name == "") {
+                span.innerHTML = "<img src='img/N.png'> 請輸入文字";
+            }
+            else if (NameLen < 2) {
+                span.innerHTML = "<img src='img/N.png'> 必須輸入兩個字以上";
+            }
+            else if (NameCh >= 0x4e00 && NameCh <= 0x9fff) {
+                span.innerHTML = "<img src='img/Y.png'> 正確";
+                console.log(NameCh);
+            }
+            else {
+                span.innerHTML = "<img src='img/N.png'> 請輸入中文";
+            }
+        }
+        function EnterPwd() {
+            let Pwd = document.getElementById("idPwd").value;
+            let span = document.getElementById("idsp2");
+            let PwdLen = Pwd.length;
+            let flag1, flag2, flag3, flag4;
+
+            if (Pwd == "")
+                span.innerHTML = "<img src='img/N.png'> 密碼不可為空白";
+            else if (PwdLen >= 6) {
+
+                for (let i = 0; i < PwdLen; i++) {
+                    //ASCII
+                    let ch = Pwd.charCodeAt(i);
+                    console.log(ch);
+
+                    if (ch >= 48 && ch <= 57) {
+                        flag1 = true;
+                        console.log(flag1);
+                    }
+                    else if (ch >= 65 && ch <= 90) {
+                        flag2 = true;
+                        console.log(flag2);
+                    }
+                    else if (ch >= 97 && ch <= 122) {
+                        flag3 = true;
+                        console.log(flag3);
+                    }
+                    else if (ch >= 32 && ch <= 47 || ch >= 58 && ch <= 64 || ch >= 91 && ch <= 96 || ch >= 123 && ch <= 126) {
+                        flag4 = true;
+                        console.log(flag4);
+                    }
+
+                    if (flag1 && flag2 && flag3 && flag4) {
+                        break;
+                    }
+                }
+                if (flag1 && flag2 && flag3 && flag4) {
+                    span.innerHTML = "<img src='img/Y.png'> 正確";
+                }
+                else {
+                    span.innerHTML = "<img src='img/N.png'> 格式不正確";
+                }
+
+            }
+            else {
+                span.innerHTML = "<img src='img/N.png'> 至少6個字以上";
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

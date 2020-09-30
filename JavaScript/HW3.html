@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork-3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            color: aliceblue;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(231, 200, 131);
+            position: relative;
+            top: 2px;
+            left: 1px;
+        }
+
+        .bg {
+            height: 100px;
+            background-color: lightslategray;
+        }
+
+        .d1 {
+
+            text-align: center;
+            margin-top: 15rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-around bg">
+        <a href="HW1.html">HomeWork-1</a>
+        <a href="HW2.html">HomeWork-2</a>
+        <a href="HW3.html">HomeWork-3</a>
+        <a href="HW4.html">HomeWork-4</a>
+        <a href="HW5.html">HomeWork-5</a>
+    </div>
+
+    <div class="d1">
+        <img id="idimg1" src="img/star.gif" alt="">
+        <img id="idimg2" src="img/star.gif" alt="">
+        <img id="idimg3" src="img/star.gif" alt="">
+        <img id="idimg4" src="img/star.gif" alt="">
+        <img id="idimg5" src="img/star.gif" alt="">
+        <p id="p">請評分</p>
+    </div>
+
+
+    <script>
+        let imgs = document.querySelectorAll("img");
+        let imgLen = imgs.length;
+        for (let i = 0; i < imgLen; i++) {
+            imgs[i].onmouseover = over;
+            imgs[i].onmouseout = out;
+            imgs[i].onclick = click;
+        }
+        function over() {
+            let no = this.id.charAt(5);
+            for (let i = 0; i < no; i++) {
+                imgs[i].src = "img/chngstar.gif";
+                p.innerHTML = "給" + (i + 1) + "分";
+            }
+        }
+        function out() {
+            let no = this.id.charAt(5);
+            for (let i = 0; i < no; i++) {
+                imgs[i].src = "img/star.gif";
+                p.innerHTML = "請評分";
+            }
+        }
+
+        function click() {
+            let no = this.id.charAt(5);
+            for (let i = 0; i < no; i++) {
+                imgs[i].src = "img/chngstar.gif";
+                imgs[i].onmouseout = null;
+                // console.log(imgs[i]);
+
+                if (i === 3) {
+                    imgs[4].src = "img/star.gif";
+                }
+                else if (i == 2) {
+                    imgs[4].src = "img/star.gif";
+                    imgs[3].src = "img/star.gif";
+                }
+                else if (i == 1) {
+                    imgs[4].src = "img/star.gif";
+                    imgs[3].src = "img/star.gif";
+                    imgs[2].src = "img/star.gif";
+                }
+                else if (i == 0) {
+                    imgs[4].src = "img/star.gif";
+                    imgs[3].src = "img/star.gif";
+                    imgs[2].src = "img/star.gif";
+                    imgs[1].src = "img/star.gif";
+                }
+            }
+        }
+
+
+        // var img1 = document.querySelector("#idimg1");
+        // var img2 = document.querySelector("#idimg2");
+        // var img3 = document.querySelector("#idimg3");
+
+
+        // img1.onmouseover = mouseover => {
+        //     img1.src = "img/chngstar.gif";
+        //     p.innerHTML = "給1分";
+        // };
+        // img1.onmouseout = mouseout => {
+        //     img1.src = "img/star.gif";
+        //     p.innerHTML = "請評分";
+        // };
+
+        // img2.onmouseover = mouseover => {
+        //     img1.src = "img/chngstar.gif";
+        //     img2.src = "img/chngstar.gif";
+        //     p.innerHTML = "給2分";
+        // }
+        // img2.onmouseout = mouseout => {
+        //     img1.src = "img/star.gif";
+        //     img2.src = "img/star.gif";
+        //     p.innerHTML = "請評分";
+        // };
+        // img3.onmouseover = mouseover => {
+        //     img1.src = "img/chngstar.gif";
+        //     img2.src = "img/chngstar.gif";
+        //     img3.src = "img/chngstar.gif";
+        //     p.innerHTML = "給3分";
+        // }
+        // img3.onmouseout = mouseout => {
+        //     img1.src = "img/star.gif";
+        //     img2.src = "img/star.gif";
+        //     img3.src = "img/star.gif";
+        //     p.innerHTML = "請評分";
+        // };
+
+
+
+        // document.querySelector("#idimg4").onmouseover = mouseover4;
+        // document.querySelector("#idimg4").onmouseout = mouseout4;
+
+        // document.querySelector("#idimg5").onmouseover = mouseover5;
+        // document.querySelector("#idimg5").onmouseout = mouseout5;
+
+        // document.querySelector("#idimg1").onclick = click;
+        // document.querySelector("#idimg2").onclick = click2;
+        // document.querySelector("#idimg3").onclick = click3;
+        // document.querySelector("#idimg4").onclick = click4;
+        // document.querySelector("#idimg5").onclick = click5;
+
+
+        // function mouseover4() {
+        //     document.querySelector("#idimg1").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg2").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg3").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg4").src = "img/chngstar.gif";
+        //     p.innerHTML = "給4分";
+        // }
+        // function mouseout4() {
+        //     document.querySelector("#idimg1").src = "img/star.gif";
+        //     document.querySelector("#idimg2").src = "img/star.gif";
+        //     document.querySelector("#idimg3").src = "img/star.gif";
+        //     document.querySelector("#idimg4").src = "img/star.gif";
+        //     p.innerHTML = "請評分";
+        // }
+
+        // function mouseover5() {
+        //     document.querySelector("#idimg1").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg2").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg3").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg4").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg5").src = "img/chngstar.gif";
+        //     p.innerHTML = "給5分";
+        // }
+        // function mouseout5() {
+        //     document.querySelector("#idimg1").src = "img/star.gif";
+        //     document.querySelector("#idimg2").src = "img/star.gif";
+        //     document.querySelector("#idimg3").src = "img/star.gif";
+        //     document.querySelector("#idimg4").src = "img/star.gif";
+        //     document.querySelector("#idimg5").src = "img/star.gif";
+        //     p.innerHTML = "請評分";
+        // }
+
+
+        // function click() {
+        //     document.querySelector("#idimg1").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg2").src = "img/star.gif";
+        //     document.querySelector("#idimg3").src = "img/star.gif";
+        //     document.querySelector("#idimg4").src = "img/star.gif";
+        //     document.querySelector("#idimg5").src = "img/star.gif";
+        //     document.querySelector("#idimg1").onmouseout = null;
+        // }
+        // function click2() {
+        //     document.querySelector("#idimg2").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg3").src = "img/star.gif";
+        //     document.querySelector("#idimg4").src = "img/star.gif";
+        //     document.querySelector("#idimg5").src = "img/star.gif";
+        //     document.querySelector("#idimg1").onmouseout = null;
+        //     document.querySelector("#idimg2").onmouseout = null;
+
+        // }
+        // function click3() {
+        //     document.querySelector("#idimg3").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg4").src = "img/star.gif";
+        //     document.querySelector("#idimg5").src = "img/star.gif";
+        //     document.querySelector("#idimg1").onmouseout = null;
+        //     document.querySelector("#idimg2").onmouseout = null;
+        //     document.querySelector("#idimg3").onmouseout = null;
+
+        // }
+        // function click4() {
+        //     document.querySelector("#idimg4").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg5").src = "img/star.gif";
+        //     document.querySelector("#idimg1").onmouseout = null;
+        //     document.querySelector("#idimg2").onmouseout = null;
+        //     document.querySelector("#idimg3").onmouseout = null;
+        //     document.querySelector("#idimg4").onmouseout = null;
+
+        // }
+        // function click5() {
+        //     document.querySelector("#idimg5").src = "img/chngstar.gif";
+        //     document.querySelector("#idimg1").onmouseout = null;
+        //     document.querySelector("#idimg2").onmouseout = null;
+        //     document.querySelector("#idimg3").onmouseout = null;
+        //     document.querySelector("#idimg4").onmouseout = null;
+        //     document.querySelector("#idimg5").onmouseout = null;
+
+        // }
+    </script>
+</body>
+
+</html>
