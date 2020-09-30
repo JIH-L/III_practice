@@ -1,0 +1,10 @@
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\bin\Debug\HW_Hello.exe.config
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\bin\Debug\HW_Hello.exe
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\bin\Debug\HW_Hello.pdb
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\obj\Debug\HW1_Hello.csprojAssemblyReference.cache
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\obj\Debug\HW_Hello.Form1.resources
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\obj\Debug\HW_Hello.Properties.Resources.resources
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\obj\Debug\HW1_Hello.csproj.GenerateResource.cache
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\obj\Debug\HW1_Hello.csproj.CoreCompileInputs.cache
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\obj\Debug\HW_Hello.exe
+C:\Users\Sol\source\repos\HW_Hello\HW_Hello\obj\Debug\HW_Hello.pdb
